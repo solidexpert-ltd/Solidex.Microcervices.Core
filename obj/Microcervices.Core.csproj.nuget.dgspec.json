@@ -1,26 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "/Users/kristina/net/solidexcrm/PhotoMSK/Services/Microcervices.Core/Microcervices.Core.csproj": {}
+    "C:\\work\\belka-api\\PhotoMSK\\Services\\Microcervices.Core\\Microcervices.Core.csproj": {}
   },
   "projects": {
-    "/Users/kristina/net/solidexcrm/PhotoMSK/Services/Microcervices.Core/Microcervices.Core.csproj": {
+    "C:\\work\\belka-api\\PhotoMSK\\Services\\Microcervices.Core\\Microcervices.Core.csproj": {
       "version": "1.0.11",
       "restore": {
-        "projectUniqueName": "/Users/kristina/net/solidexcrm/PhotoMSK/Services/Microcervices.Core/Microcervices.Core.csproj",
+        "projectUniqueName": "C:\\work\\belka-api\\PhotoMSK\\Services\\Microcervices.Core\\Microcervices.Core.csproj",
         "projectName": "Microcervices.Core",
-        "projectPath": "/Users/kristina/net/solidexcrm/PhotoMSK/Services/Microcervices.Core/Microcervices.Core.csproj",
-        "packagesPath": "/Users/kristina/.nuget/packages/",
-        "outputPath": "/Users/kristina/net/solidexcrm/PhotoMSK/Services/Microcervices.Core/obj/",
+        "projectPath": "C:\\work\\belka-api\\PhotoMSK\\Services\\Microcervices.Core\\Microcervices.Core.csproj",
+        "packagesPath": "C:\\Users\\yury.khmialuk\\.nuget\\packages\\",
+        "outputPath": "C:\\work\\belka-api\\PhotoMSK\\Services\\Microcervices.Core\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "/Users/kristina/net/solidexcrm/PhotoMSK/.nuget/NuGet.Config",
-          "/Users/kristina/.nuget/NuGet/NuGet.Config"
+          "C:\\work\\belka-api\\PhotoMSK\\.nuget\\NuGet.Config",
+          "C:\\Users\\yury.khmialuk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {},
           "https://repo.solidexpert.ltd/repository/nuget-hosted/": {}
         },
@@ -60,7 +65,7 @@
             },
             "Microservices.RestClient": {
               "target": "Package",
-              "version": "[1.0.3, )"
+              "version": "[1.0.4, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
@@ -102,15 +107,15 @@
             },
             "Solidex.Core.Base": {
               "target": "Package",
-              "version": "[1.0.5, )"
+              "version": "[1.0.6, )"
             },
             "Solidex.Core.Data": {
               "target": "Package",
-              "version": "[1.0.16, )"
+              "version": "[1.0.18, )"
             },
             "Solidex.Core.ViewModels": {
               "target": "Package",
-              "version": "[1.0.12, )"
+              "version": "[1.0.14, )"
             },
             "Swashbuckle.AspNetCore.Filters": {
               "target": "Package",
@@ -147,7 +152,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.100/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

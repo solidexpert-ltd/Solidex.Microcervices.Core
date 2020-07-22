@@ -27,7 +27,7 @@
     <PackageReference Include="Hangfire.AspNetCore" Version="1.7.6" />
     <PackageReference Include="Hangfire.SqlServer" Version="1.7.6" />
     <PackageReference Include="libphonenumber-csharp" Version="8.12.2" />
-    <PackageReference Include="Microservices.RestClient" Version="1.0.3" />
+    <PackageReference Include="Microservices.RestClient" Version="1.0.4" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.3" />
     <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="3.1.3" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
@@ -41,9 +41,9 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.3" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="FcmSharp" Version="1.1.0" />
-    <PackageReference Include="Solidex.Core.Base" Version="1.0.5" />
-    <PackageReference Include="Solidex.Core.Data" Version="1.0.16" />
-    <PackageReference Include="Solidex.Core.ViewModels" Version="1.0.12" />
+    <PackageReference Include="Solidex.Core.Base" Version="1.0.6" />
+    <PackageReference Include="Solidex.Core.Data" Version="1.0.18" />
+    <PackageReference Include="Solidex.Core.ViewModels" Version="1.0.14" />
     <PackageReference Include="Swashbuckle.AspNetCore.Filters" Version="5.1.2" />
     <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="5.5.1" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="5.5.1" />
