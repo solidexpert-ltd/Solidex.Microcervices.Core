@@ -111,11 +111,11 @@
             },
             "Solidex.Core.Data": {
               "target": "Package",
-              "version": "[1.0.18, )"
+              "version": "[1.0.20, )"
             },
             "Solidex.Core.ViewModels": {
               "target": "Package",
-              "version": "[1.0.14, )"
+              "version": "[1.0.15, )"
             },
             "Swashbuckle.AspNetCore.Filters": {
               "target": "Package",

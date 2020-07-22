@@ -1306,7 +1306,7 @@
           "lib/netstandard2.0/Solidex.Core.Base.dll": {}
         }
       },
-      "Solidex.Core.Data/1.0.18": {
+      "Solidex.Core.Data/1.0.20": {
         "type": "package",
         "dependencies": {
           "Solidex.Core.Base": "1.0.4"
@@ -1318,7 +1318,7 @@
           "lib/netstandard2.0/Solidex.Core.Data.dll": {}
         }
       },
-      "Solidex.Core.ViewModels/1.0.14": {
+      "Solidex.Core.ViewModels/1.0.15": {
         "type": "package",
         "dependencies": {
           "Solidex.Core.Base": "1.0.5"
@@ -5103,25 +5103,25 @@
         "solidex.core.base.nuspec"
       ]
     },
-    "Solidex.Core.Data/1.0.18": {
-      "sha512": "3yInIqNWUp04O7wBhPe4JwdzrcHfGXMoLV2GaO5krPXYqWpBE80IkojZNFfM2IRCokdq+5YQP84xrxrXZYJV8A==",
+    "Solidex.Core.Data/1.0.20": {
+      "sha512": "t4Us7npPE5Nh5rTOS1tpB7Av+5v/swygZIlzeyzLQ3WQs2r8zyedmv9bAsV250RTbwbaLi4MsbZ72Xir2xSrlQ==",
       "type": "package",
-      "path": "solidex.core.data/1.0.18",
+      "path": "solidex.core.data/1.0.20",
       "files": [
         ".nupkg.metadata",
         "lib/netstandard2.0/Solidex.Core.Data.dll",
-        "solidex.core.data.1.0.18.nupkg.sha512",
+        "solidex.core.data.1.0.20.nupkg.sha512",
         "solidex.core.data.nuspec"
       ]
     },
-    "Solidex.Core.ViewModels/1.0.14": {
-      "sha512": "8NBtjclZdbBkeHXaTD7RQ6swH5HhiQB7kWCMLk0YwOkij63ZqEegd6kSzE2GxNWBQvovJbBN+ZjjQyA+sAfWoA==",
+    "Solidex.Core.ViewModels/1.0.15": {
+      "sha512": "5D5wSbpNco9Y8PlzG/GUyfOj7iq29FRoUcymfcZwzyLdrrWeRqRULbkN2zK4Jyixpbm3eve+eJtDMRN2lGEn3g==",
       "type": "package",
-      "path": "solidex.core.viewmodels/1.0.14",
+      "path": "solidex.core.viewmodels/1.0.15",
       "files": [
         ".nupkg.metadata",
         "lib/netstandard2.0/Solidex.Core.ViewModels.dll",
-        "solidex.core.viewmodels.1.0.14.nupkg.sha512",
+        "solidex.core.viewmodels.1.0.15.nupkg.sha512",
         "solidex.core.viewmodels.nuspec"
       ]
     },
@@ -9439,8 +9439,8 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.3",
       "Newtonsoft.Json >= 12.0.3",
       "Solidex.Core.Base >= 1.0.6",
-      "Solidex.Core.Data >= 1.0.18",
-      "Solidex.Core.ViewModels >= 1.0.14",
+      "Solidex.Core.Data >= 1.0.20",
+      "Solidex.Core.ViewModels >= 1.0.15",
       "Swashbuckle.AspNetCore.Filters >= 5.1.2",
       "Swashbuckle.AspNetCore.Swagger >= 5.5.1",
       "Swashbuckle.AspNetCore.SwaggerGen >= 5.5.1",
@@ -9558,11 +9558,11 @@
           },
           "Solidex.Core.Data": {
             "target": "Package",
-            "version": "[1.0.18, )"
+            "version": "[1.0.20, )"
           },
           "Solidex.Core.ViewModels": {
             "target": "Package",
-            "version": "[1.0.14, )"
+            "version": "[1.0.15, )"
           },
           "Swashbuckle.AspNetCore.Filters": {
             "target": "Package",

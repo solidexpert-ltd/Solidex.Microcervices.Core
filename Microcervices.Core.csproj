@@ -42,8 +42,8 @@
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="FcmSharp" Version="1.1.0" />
     <PackageReference Include="Solidex.Core.Base" Version="1.0.6" />
-    <PackageReference Include="Solidex.Core.Data" Version="1.0.18" />
-    <PackageReference Include="Solidex.Core.ViewModels" Version="1.0.14" />
+    <PackageReference Include="Solidex.Core.Data" Version="1.0.20" />
+    <PackageReference Include="Solidex.Core.ViewModels" Version="1.0.15" />
     <PackageReference Include="Swashbuckle.AspNetCore.Filters" Version="5.1.2" />
     <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="5.5.1" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="5.5.1" />

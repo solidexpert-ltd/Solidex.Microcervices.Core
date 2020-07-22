@@ -1,2 +1,7 @@
-bin/**
-obj/**
+/bin/**
+/obj/**
+/obj/Debug/netcoreapp3.1/Microcervices.Core.assets.cache
+/obj/Debug/netcoreapp3.1/Microcervices.Core.csprojAssemblyReference.cache
+/obj/Microcervices.Core.csproj.nuget.dgspec.json
+/obj/project.assets.json
+/obj/project.nuget.cache

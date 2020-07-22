@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "gieO8Ic45GE5CO2VlIyHnzLcHqZrm5lOuM+pbjVpVZCOUHqDeSPsKufcx6OdTRw/v5R/8wuqku7yr9FsKUABkA==",
+  "dgSpecHash": "R0MqTdrale6yHhjOlHdYLyCcYX6dCziLTR1h1KrnI071UiIJ+iKDNcKhMMRt6cKf1WkLi9leut94aPiPzdkxHQ==",
   "success": true,
   "projectFilePath": "C:\\work\\belka-api\\PhotoMSK\\Services\\Microcervices.Core\\Microcervices.Core.csproj",
   "expectedPackageFiles": [
@@ -106,8 +106,8 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\yury.khmialuk\\.nuget\\packages\\scrutor\\3.0.1\\scrutor.3.0.1.nupkg.sha512",
     "C:\\Users\\yury.khmialuk\\.nuget\\packages\\solidex.core.base\\1.0.6\\solidex.core.base.1.0.6.nupkg.sha512",
-    "C:\\Users\\yury.khmialuk\\.nuget\\packages\\solidex.core.data\\1.0.18\\solidex.core.data.1.0.18.nupkg.sha512",
-    "C:\\Users\\yury.khmialuk\\.nuget\\packages\\solidex.core.viewmodels\\1.0.14\\solidex.core.viewmodels.1.0.14.nupkg.sha512",
+    "C:\\Users\\yury.khmialuk\\.nuget\\packages\\solidex.core.data\\1.0.20\\solidex.core.data.1.0.20.nupkg.sha512",
+    "C:\\Users\\yury.khmialuk\\.nuget\\packages\\solidex.core.viewmodels\\1.0.15\\solidex.core.viewmodels.1.0.15.nupkg.sha512",
     "C:\\Users\\yury.khmialuk\\.nuget\\packages\\swashbuckle.aspnetcore\\5.0.0\\swashbuckle.aspnetcore.5.0.0.nupkg.sha512",
     "C:\\Users\\yury.khmialuk\\.nuget\\packages\\swashbuckle.aspnetcore.annotations\\5.0.0\\swashbuckle.aspnetcore.annotations.5.0.0.nupkg.sha512",
     "C:\\Users\\yury.khmialuk\\.nuget\\packages\\swashbuckle.aspnetcore.filters\\5.1.2\\swashbuckle.aspnetcore.filters.5.1.2.nupkg.sha512",
