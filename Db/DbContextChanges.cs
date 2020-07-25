@@ -3,6 +3,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using Solidex.Core.Base.Interfaces;
 using Solidex.Core.Data.Infrastructure;
 
 namespace Microcervices.Core.Db
