@@ -1,4 +1,5 @@
-﻿using System.Net;
+﻿using System;
+using System.Net;
 using System.Runtime.Serialization;
 
 namespace Microcervices.Core.Infrasructure
@@ -7,6 +8,7 @@ namespace Microcervices.Core.Infrasructure
     /// Response view model for api methods
     /// </summary>
     [DataContract]
+    [Obsolete("ResponseReturnModel is deprecated, please use Method2 instead.")]
     public class ResponseReturnModel
     {
         [DataMember(Name = "isSuccess")]
