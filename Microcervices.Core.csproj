@@ -42,7 +42,7 @@
     <PackageReference Include="FcmSharp" Version="1.1.0" />
     <PackageReference Include="Solidex.Core.Base" Version="1.0.14" />
     <PackageReference Include="Solidex.Core.Data" Version="1.0.29" />
-    <PackageReference Include="Solidex.Core.ViewModels" Version="1.0.19" />
+    <PackageReference Include="Solidex.Core.ViewModels" Version="1.0.20" />
     <PackageReference Include="Swashbuckle.AspNetCore.Filters" Version="5.1.2" />
     <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="5.5.1" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="5.5.1" />
