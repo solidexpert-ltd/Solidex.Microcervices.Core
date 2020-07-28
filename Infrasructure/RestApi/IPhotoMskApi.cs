@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Solidex.Core.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Refit;
+using Solidex.Core.Base.Infrastructure;
 using Solidex.Core.ViewModels.Company;
 using Solidex.Core.ViewModels.Event;
 using Solidex.Core.ViewModels.UserInformation;

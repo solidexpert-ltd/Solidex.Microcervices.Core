@@ -1,5 +1,6 @@
 ﻿using System.Threading.Tasks;
 using Refit;
+using Solidex.Core.Base.Infrastructure;
 using Solidex.Core.Data.Models.SMS;
 using Solidex.Core.ViewModels;
 

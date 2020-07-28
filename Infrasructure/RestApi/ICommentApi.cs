@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using Solidex.Core.ViewModels.Querying;
 using Refit;
+using Solidex.Core.Base.Infrastructure;
 using Solidex.Core.ViewModels;
 using Solidex.Core.ViewModels.Comment;
 

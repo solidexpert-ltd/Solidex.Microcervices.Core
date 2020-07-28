@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using Solidex.Core.ViewModels;
+using Solidex.Core.Base.Infrastructure;
 
 namespace Microcervices.Core.Infrasructure
 {

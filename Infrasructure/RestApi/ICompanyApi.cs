@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Refit;
+using Solidex.Core.Base.Infrastructure;
 using Solidex.Core.ViewModels.ActivityStream;
 using Solidex.Core.ViewModels.Company;
 using Solidex.Core.ViewModels.UserInformation;
