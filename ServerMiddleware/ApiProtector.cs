@@ -1,19 +1,14 @@
 ﻿using System;
 using System.Linq;
 using System.Net.Http;
-using System.Reflection;
 using System.Threading.Tasks;
-using Microcervices.Core.HttpManager;
 using Microcervices.Core.Infrasructure.Attributes;
 using Microcervices.Core.Infrasructure.RestApi;
-using Microservices.RestClient;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
-using Solidex.Core.ViewModels.Querying;
-using Refit;
 
 namespace Microcervices.Core.ServerMiddleware
 {
