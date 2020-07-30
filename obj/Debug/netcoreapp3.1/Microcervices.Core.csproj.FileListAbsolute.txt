@@ -1,4 +1,0 @@
-/Users/kristina/net/solidexcrm/PhotoMSK/Services/Microcervices.Core/obj/Debug/netcoreapp3.1/Microcervices.Core.csprojAssemblyReference.cache
-/Users/kristina/net/solidexcrm/PhotoMSK/Services/Microcervices.Core/obj/Debug/netcoreapp3.1/RefitStubs.g.cs
-/Users/kristina/net/solidexcrm/PhotoMSK/Services/Microcervices.Core/obj/Debug/netcoreapp3.1/Microcervices.Core.AssemblyInfoInputs.cache
-/Users/kristina/net/solidexcrm/PhotoMSK/Services/Microcervices.Core/obj/Debug/netcoreapp3.1/Microcervices.Core.AssemblyInfo.cs

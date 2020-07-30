@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
+using Solidex.Core.Base.Interfaces;
 using Solidex.Core.Data.Infrastructure;
 
 namespace Microcervices.Core.Infrasructure
