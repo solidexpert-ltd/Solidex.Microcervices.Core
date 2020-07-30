@@ -1,11 +1,10 @@
 ﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.OpenApi.Models;
-using Swashbuckle.Swagger;
 
-namespace Microcervices.Core
+namespace Microcervices.Core.ServerMiddleware
 {
-    public static class IApplicationExtension
+    public static class ApplicationExtension
     {
         public static IApplicationBuilder UseSwaggerSolidConf(this IApplicationBuilder app, bool env, string basepath)
         {

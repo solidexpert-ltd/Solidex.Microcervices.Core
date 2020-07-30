@@ -1,17 +1,12 @@
-﻿using Solidex.Core.ViewModels.Querying;
-
+﻿
 namespace Microcervices.Core.Infrasructure
 {
     public static class Paginator
     {
-        public static int Skip(int p, int c)
+        public static int Skip(int page, int count)
         {
-            return (p - 1 < 0 ? 0 : p - 1) * c;
+            return (page - 1 < 0 ? 0 : page - 1) * count;
         }
 
-        public static int Skip<T>(this FilterRequest<T> request)
-        {
-            return Skip(request.Page, request.Limit);
-        }
     }
 }

@@ -5,18 +5,17 @@ using System.Security.Claims;
 using System.Text;
 using Microcervices.Core.Infrasructure.Authorization;
 using Microsoft.IdentityModel.Tokens;
-using Solidex.Core.Data.EntityTypes;
-using Solidex.Core.Data.Models.UserInformation;
+using Solidex.Core.Base.ComplexTypes;
 
 namespace Microcervices.Core.JwtAuth
 {
     public static class JwtTokenProvider
     {
-        public static string GenerateJwtToken(string userName, string userId, UserInformationEntity ui, IList<string> roles)
+        public static string GenerateJwtToken(string userName, string userId, Guid ui, IList<string> roles)
         {
             var claims = new List<Claim>
             {
-                new Claim("UserInformationID", ui.Id.ToString()),
+                new Claim("UserInformationID", ui.ToString()),
                 new Claim(ClaimTypes.Name, userName),
                 new Claim(ClaimTypes.NameIdentifier, userId)
             };
@@ -49,7 +48,7 @@ namespace Microcervices.Core.JwtAuth
         public static string GenerateSystemToken(SystemUsersEnumeration user)
         {
             return GenerateJwtToken("System", Guid.Empty.ToString(),
-                new UserInformationEntity() { Id = user.Identificator },
+                user.Identificator,
                 new List<string>
                 {
                     "root-admin",

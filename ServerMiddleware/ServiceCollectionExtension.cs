@@ -8,11 +8,11 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.Filters;
 
-namespace Microcervices.Core
+namespace Microcervices.Core.ServerMiddleware
 {
     public static class ServiceCollectionExtension
     {
-        public static IServiceCollection UseSolidAuthorization(this IServiceCollection collection)
+        public static IServiceCollection AddSolidAuthorization(this IServiceCollection collection)
         {
             JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear(); // => remove default claims
 
@@ -39,11 +39,11 @@ namespace Microcervices.Core
             return collection;
         }
 
-        public static IServiceCollection UseSwaggerConf(this IServiceCollection collection, string assemblyName)
+        public static IServiceCollection AddSwaggerConf(this IServiceCollection collection, string assemblyName)
         {
             collection.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo {Title = $"{assemblyName} API", Version = "v1"});
+                c.SwaggerDoc("v3", new OpenApiInfo {Title = $"{assemblyName} API", Version = "v3"});
                 var basePath = AppContext.BaseDirectory;
                 c.IncludeXmlComments(basePath + $"{assemblyName}.xml");
 

@@ -3,11 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Security.Claims;
-using System.Security.Principal;
-using System.Text;
-using Microcervices.Core.HttpManager;
-using Microcervices.Core.Infrasructure.RestApi;
-using Microservices.RestClient;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -16,7 +11,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
-using Refit;
 
 
 namespace Microcervices.Core.ServerMiddleware
@@ -46,52 +40,7 @@ namespace Microcervices.Core.ServerMiddleware
             return Guid.Parse(sod.Value);
         }
 
-        public static IApplicationBuilder UseApiProtector(this IApplicationBuilder builder)
-        {
-            builder.UseMiddleware<ApiProtector>();
 
-            return builder;
-        }
-
-        public static string GetShortcut(this ControllerBase controller)
-        {
-            controller.RouteData.Values.TryGetValue("shortcut", out var shortcut);
-
-            return shortcut != null ? ((string)shortcut).ToLower() : string.Empty;
-        }
-
-        public static T CreateRestService<T>(this ControllerBase controller, ServerUrls server)
-        {
-            var handler = new HttpClientHandler
-            {
-                ServerCertificateCustomValidationCallback = (sender, certificate, chain, sslPolicyErrors) => true
-            };
-
-            var client = new HttpClient(handler)
-            {
-                Timeout = TimeSpan.FromMinutes(1)
-            };
-
-            foreach (var header in controller.Request.Headers)
-            {
-                if (header.Key == "Accept" || header.Key == "Authorization")
-                    client.DefaultRequestHeaders.Add(header.Key, header.Value.ToString());
-            }
-
-            IWebHostEnvironment env = (IWebHostEnvironment) controller.HttpContext.RequestServices.GetService(typeof(IWebHostEnvironment));
-
-            client.BaseAddress = new Uri(env.IsDevelopment() ? server.TestUrl : server.DeployUrl);
-
-            return RestService.For<T>(client, new RefitSettings
-            {
-                ContentSerializer = new NewtonsoftJsonContentSerializer(
-                    new JsonSerializerSettings
-                    {
-                        ContractResolver = new CamelCasePropertyNamesContractResolver()
-                    }
-                )
-            });
-        }
 
         public static bool IsInRootAdmin(this ControllerBase controller)
         {
