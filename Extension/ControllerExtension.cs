@@ -15,6 +15,17 @@ namespace Microcervices.Core.Extension
     public static class ControllerExtension
     {
         /// <summary>
+        /// Generate bad request response
+        /// </summary>
+        /// <param name="controllerBase"></param>
+        /// <param name="message">message of response</param>
+        /// <returns></returns>
+        public static IActionResult BadRequest(this ControllerBase controllerBase, string message)
+        {
+            return new ObjectResult(new ResponseViewModel(message,400,false)){StatusCode = 400};
+        }
+        
+        /// <summary>
         /// Send 404 result
         /// </summary>
         /// <param name="controllerBase"></param>
@@ -22,7 +33,12 @@ namespace Microcervices.Core.Extension
         /// <returns></returns>
         public static IActionResult NotFound(this ControllerBase controllerBase, string message)
         {
-            return new ResponseViewModel(message, 404, false).AsActionResult();
+            return new NotFoundObjectResult(new ResponseViewModel(message, 404, false));
+        }
+
+        public static IActionResult AccessDenied(this ControllerBase controllerBase, string message)
+        {
+            return new ObjectResult(new ResponseViewModel(message,403,false)){StatusCode = 403};
         }
 
         public static IActionResult Created<T>(this ControllerBase controllerBase, T model) where T : class
@@ -36,12 +52,12 @@ namespace Microcervices.Core.Extension
         }
         public static IActionResult Found<T, TE>(this IControllerWithMapper controller, TE model) where T : class
         {
-            return new ResponseViewModel<T>(controller.Mapper.Map<T>(model)).AsActionResult();
+            return new OkObjectResult(new ResponseViewModel<T>(controller.Mapper.Map<T>(model)).AsActionResult());;
         }
         
         public static IActionResult Page<T, TE>(this IControllerWithMapper controller, IEnumerable<TE> model,int page,int totoal) where T : class
         {
-            return new ObjectResult(new PageView<T>()
+            return new OkObjectResult(new PageView<T>()
             {
                 Elements = controller.Mapper.Map<IList<T>>(model),
                 Count = model.Count(),
