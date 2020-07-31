@@ -20,7 +20,7 @@ namespace Microcervices.Core.Extension
         /// <param name="controllerBase"></param>
         /// <param name="message">message of response</param>
         /// <returns></returns>
-        public static IActionResult BadRequest(this ControllerBase controllerBase, string message)
+        public static IActionResult BadRequestResult(this ControllerBase controllerBase, string message)
         {
             return new ObjectResult(new ResponseViewModel(message,400,false)){StatusCode = 400};
         }
@@ -31,31 +31,31 @@ namespace Microcervices.Core.Extension
         /// <param name="controllerBase"></param>
         /// <param name="message">message </param>
         /// <returns></returns>
-        public static IActionResult NotFound(this ControllerBase controllerBase, string message)
+        public static IActionResult NotFoundResult(this ControllerBase controllerBase, string message)
         {
             return new NotFoundObjectResult(new ResponseViewModel(message, 404, false));
         }
 
-        public static IActionResult AccessDenied(this ControllerBase controllerBase, string message)
+        public static IActionResult AccessDeniedResult(this ControllerBase controllerBase, string message)
         {
             return new ObjectResult(new ResponseViewModel(message,403,false)){StatusCode = 403};
         }
 
-        public static IActionResult Created<T>(this ControllerBase controllerBase, T model) where T : class
+        public static IActionResult CreatedResult<T>(this ControllerBase controllerBase, T model) where T : class
         {
             return new ResponseViewModel<T>(model, 201, true).AsActionResult();
         }
 
-        public static IActionResult Created<T,TE>(this IControllerWithMapper controller, T model) where T : class
+        public static IActionResult CreatedResult<T,TE>(this IControllerWithMapper controller, T model) where T : class
         {
             return new ResponseViewModel<T>(controller.Mapper.Map<T>(model), 201, true).AsActionResult();
         }
-        public static IActionResult Found<T, TE>(this IControllerWithMapper controller, TE model) where T : class
+        public static IActionResult FoundResult<T, TE>(this IControllerWithMapper controller, TE model) where T : class
         {
             return new OkObjectResult(new ResponseViewModel<T>(controller.Mapper.Map<T>(model)).AsActionResult());;
         }
         
-        public static IActionResult Page<T, TE>(this IControllerWithMapper controller, IEnumerable<TE> model,int page,int totoal) where T : class
+        public static IActionResult PageResult<T, TE>(this IControllerWithMapper controller, IEnumerable<TE> model,int page,int totoal) where T : class
         {
             return new OkObjectResult(new PageView<T>()
             {
