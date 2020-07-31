@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json;
@@ -45,6 +46,11 @@ namespace Microcervices.Core.ServerMiddleware
         public static bool IsInRootAdmin(this ControllerBase controller)
         {
             return controller.User.IsInRole("root-admin");
+        }
+
+        public static string GetMicroserviceHost(this IConfiguration configuration, string name)
+        {
+            return configuration?.GetSection("ServicesHosts")?[name];
         }
 
     }
