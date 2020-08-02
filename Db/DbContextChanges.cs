@@ -3,7 +3,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using Solidex.Core.Data.Infrastructure;
+using Solidex.Core.Base.Abstraction;
 
 namespace Microcervices.Core.Db
 {
