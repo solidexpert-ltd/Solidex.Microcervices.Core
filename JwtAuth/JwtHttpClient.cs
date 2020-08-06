@@ -20,7 +20,7 @@ namespace Microcervices.Core.JwtAuth
 
             if (accessor.HttpContext.Request.Headers.ContainsKey("Authorization"))
             {
-                DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", accessor.HttpContext.Request.Headers["Authorization"]);
+                DefaultRequestHeaders.Add("Authorization", new string[] { accessor.HttpContext.Request.Headers["Authorization"] });
             }
             else
             {
