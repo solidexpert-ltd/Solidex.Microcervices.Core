@@ -29,11 +29,11 @@ namespace Microcervices.Core.JwtAuth
             Timeout = TimeSpan.FromMinutes(1);
             DefaultRequestHeaders.Add("Accept", "application/json");
 
-            if (accessor.HttpContext.Request.Headers.ContainsKey("Authorization"))
+            try
             {
                 DefaultRequestHeaders.Add("Authorization", new string[] { accessor.HttpContext.Request.Headers["Authorization"] });
             }
-            else
+            catch (Exception e)
             {
                 DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", JwtTokenProvider.GenerateSystemToken(SystemUsersEnumeration.SystemMessage));
             }
