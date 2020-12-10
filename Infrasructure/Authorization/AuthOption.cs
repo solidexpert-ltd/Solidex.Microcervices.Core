@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Microcervices.Core.Infrasructure.Authorization
+﻿namespace Microcervices.Core.Infrasructure.Authorization
 {
     public static class AuthOptions
     {

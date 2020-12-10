@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Primitives;
 using Solidex.Core.Base.ComplexTypes;
 
 namespace Microcervices.Core.JwtAuth
