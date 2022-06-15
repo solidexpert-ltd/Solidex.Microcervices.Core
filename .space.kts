@@ -1,5 +1,5 @@
-job(".NET Core desktop. Build, test, publish"){
-    container(image = "mcr.microsoft.com/dotnet/core/sdk:3.1"){
+job(".NET Core sdk. Build, test, publish"){
+    container(image = "mcr.microsoft.com/dotnet/sdk:6.0"){
         env["FEED_URL"] = "https://nuget.pkg.jetbrains.space/solidexpert/p/scrm/nuget/v3/index.json"
         shellScript {
             content = """

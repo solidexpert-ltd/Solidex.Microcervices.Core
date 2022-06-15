@@ -6,4 +6,4 @@ VERSION=1.0.$JB_SPACE_EXECUTION_NUMBER
 
 echo "Publish nuget package"
 dotnet pack -p:PackageVersion=$VERSION -o ./
-dotnet nuget push Solidex.Microservice.Core.$VERSION.nupkg -s space
+dotnet nuget push Solidex.Microcervices.Core.$VERSION.nupkg -s space
