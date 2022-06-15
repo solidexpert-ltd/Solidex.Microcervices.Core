@@ -4,7 +4,7 @@ job(".NET Core sdk. Build, test, publish"){
         shellScript {
             content = """
                 echo Run build...
-                dotnet nuget add source $FEED_URL -n space -u "%JB_SPACE_CLIENT_ID%" -p "%JB_SPACE_CLIENT_SECRET%" --store-password-in-clear-text
+                dotnet nuget add source "https://nuget.pkg.jetbrains.space/solidexpert/p/scrm/nuget/v3/index.json" -n space -u "%JB_SPACE_CLIENT_ID%" -p "%JB_SPACE_CLIENT_SECRET%" --store-password-in-clear-text
                 dotnet build
                 echo Run tests...
                 dotnet test ./MainTests/
