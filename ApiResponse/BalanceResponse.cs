@@ -1,6 +1,6 @@
-﻿using Microcervices.Core.Helper;
+﻿using Solidex.Microcervices.Core.Helper;
 
-namespace Microcervices.Core.ApiResponse
+namespace Solidex.Microcervices.Core.ApiResponse
 {
     public class BalanceResponse
     {

@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
 
-namespace Microcervices.Core.ServerMiddleware
+namespace Solidex.Microcervices.Core.ServerMiddleware
 {
     public class ErrorHandlingMiddleware
     {

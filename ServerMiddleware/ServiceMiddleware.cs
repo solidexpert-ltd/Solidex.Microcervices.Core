@@ -8,7 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
 
 
-namespace Microcervices.Core.ServerMiddleware
+namespace Solidex.Microcervices.Core.ServerMiddleware
 {
     public static class ServiceMiddleware
     {

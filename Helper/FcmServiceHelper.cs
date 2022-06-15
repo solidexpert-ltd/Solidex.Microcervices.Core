@@ -3,7 +3,7 @@ using FcmSharp.Settings;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
-namespace Microcervices.Core.Helper
+namespace Solidex.Microcervices.Core.Helper
 {
     public static class FcmServiceHelper
     {

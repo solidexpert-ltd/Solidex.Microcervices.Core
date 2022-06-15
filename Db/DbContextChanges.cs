@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Solidex.Core.Base.Abstraction;
 
-namespace Microcervices.Core.Db
+namespace Solidex.Microcervices.Core.Db
 {
     public class DbContextWithChanges:DbContext
     {

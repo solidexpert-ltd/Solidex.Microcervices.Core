@@ -1,9 +1,9 @@
 ﻿using System.IO;
-using Microcervices.Core.ApiResponse;
-using Microcervices.Core.Helper;
 using Newtonsoft.Json.Linq;
+using Solidex.Microcervices.Core.ApiResponse;
+using Solidex.Microcervices.Core.Helper;
 
-namespace Microcervices.Core.Api
+namespace Solidex.Microcervices.Core.Api
 {
     public class ImageToText : AnticaptchaBase, IAnticaptchaTaskProtocol
     {

@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Solidex.Core.Base.Infrastructure;
 
-namespace Microcervices.Core.Infrasructure
+namespace Solidex.Microcervices.Core.Infrasructure
 {
     public static class ResponseHelper
     {

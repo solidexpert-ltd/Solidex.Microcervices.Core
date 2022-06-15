@@ -1,7 +1,7 @@
-﻿using Microcervices.Core.Helper;
-using Newtonsoft.Json.Linq;
+﻿using Newtonsoft.Json.Linq;
+using Solidex.Microcervices.Core.Helper;
 
-namespace Microcervices.Core.Api
+namespace Solidex.Microcervices.Core.Api
 {
     public class NoCaptcha : NoCaptchaProxyless
     {

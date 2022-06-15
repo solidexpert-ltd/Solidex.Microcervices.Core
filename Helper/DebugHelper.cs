@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Microcervices.Core.Helper
+namespace Solidex.Microcervices.Core.Helper
 {
     public class DebugHelper
     {

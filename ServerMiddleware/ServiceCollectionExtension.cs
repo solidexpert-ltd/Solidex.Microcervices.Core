@@ -1,14 +1,14 @@
 ﻿using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
-using Microcervices.Core.Infrasructure.Authorization;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Solidex.Microcervices.Core.Infrasructure.Authorization;
 using Swashbuckle.AspNetCore.Filters;
 
-namespace Microcervices.Core.ServerMiddleware
+namespace Solidex.Microcervices.Core.ServerMiddleware
 {
     public static class ServiceCollectionExtension
     {

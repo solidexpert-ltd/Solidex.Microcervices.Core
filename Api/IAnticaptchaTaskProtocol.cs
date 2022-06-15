@@ -1,7 +1,7 @@
-﻿using Microcervices.Core.ApiResponse;
-using Newtonsoft.Json.Linq;
+﻿using Newtonsoft.Json.Linq;
+using Solidex.Microcervices.Core.ApiResponse;
 
-namespace Microcervices.Core.Api
+namespace Solidex.Microcervices.Core.Api
 {
     public interface IAnticaptchaTaskProtocol
     {

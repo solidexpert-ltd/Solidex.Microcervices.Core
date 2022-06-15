@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using Microcervices.Core.Infrasructure.Authorization;
 using Microsoft.IdentityModel.Tokens;
 using Solidex.Core.Base.ComplexTypes;
+using Solidex.Microcervices.Core.Infrasructure.Authorization;
 
-namespace Microcervices.Core.JwtAuth
+namespace Solidex.Microcervices.Core.JwtAuth
 {
     public static class JwtTokenProvider
     {

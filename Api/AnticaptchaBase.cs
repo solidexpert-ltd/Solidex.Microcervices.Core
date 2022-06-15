@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Threading;
-using Microcervices.Core.ApiResponse;
-using Microcervices.Core.Helper;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using Solidex.Microcervices.Core.ApiResponse;
+using Solidex.Microcervices.Core.Helper;
 
-namespace Microcervices.Core.Api
+namespace Solidex.Microcervices.Core.Api
 {
     public abstract class AnticaptchaBase
     {

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Globalization;
-using Microcervices.Core.Helper;
 using Newtonsoft.Json.Linq;
+using Solidex.Microcervices.Core.Helper;
 
-namespace Microcervices.Core.ApiResponse
+namespace Solidex.Microcervices.Core.ApiResponse
 {
     public class TaskResultResponse
     {
