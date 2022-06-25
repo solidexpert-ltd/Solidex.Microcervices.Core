@@ -1,6 +1,6 @@
-﻿using Solidex.Microcervices.Core.Helper;
+﻿using Solidex.Microservices.Core.Helper;
 
-namespace Solidex.Microcervices.Core.ApiResponse
+namespace Solidex.Microservices.Core.ApiResponse
 {
     public class BalanceResponse
     {

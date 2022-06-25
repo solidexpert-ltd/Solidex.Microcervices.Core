@@ -5,9 +5,9 @@ using System.Security.Claims;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
 using Solidex.Core.Base.ComplexTypes;
-using Solidex.Microcervices.Core.Infrasructure.Authorization;
+using Solidex.Microservices.Core.Infrasructure.Authorization;
 
-namespace Solidex.Microcervices.Core.JwtAuth
+namespace Solidex.Microservices.Core.JwtAuth
 {
     public static class JwtTokenProvider
     {

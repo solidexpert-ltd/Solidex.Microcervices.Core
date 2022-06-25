@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Solidex.Microcervices.Core.Infrasructure.Attributes
+namespace Solidex.Microservices.Core.Infrasructure.Attributes
 {
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, Inherited = false, AllowMultiple = true)]
     public sealed class ApiProtectAttribute : Attribute

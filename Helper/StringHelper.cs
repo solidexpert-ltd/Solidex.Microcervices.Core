@@ -1,4 +1,4 @@
-﻿namespace Solidex.Microcervices.Core.Helper
+﻿namespace Solidex.Microservices.Core.Helper
 {
     public class StringHelper
     {

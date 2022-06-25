@@ -1,9 +1,9 @@
 ﻿using System;
 using Newtonsoft.Json.Linq;
-using Solidex.Microcervices.Core.ApiResponse;
-using Solidex.Microcervices.Core.Helper;
+using Solidex.Microservices.Core.ApiResponse;
+using Solidex.Microservices.Core.Helper;
 
-namespace Solidex.Microcervices.Core.Api
+namespace Solidex.Microservices.Core.Api
 {
     internal class FunCaptcha : AnticaptchaBase, IAnticaptchaTaskProtocol
     {

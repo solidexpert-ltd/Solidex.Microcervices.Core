@@ -1,4 +1,4 @@
-﻿namespace Solidex.Microcervices.Core.Infrasructure.Authorization
+﻿namespace Solidex.Microservices.Core.Infrasructure.Authorization
 {
     public static class AuthOptions
     {

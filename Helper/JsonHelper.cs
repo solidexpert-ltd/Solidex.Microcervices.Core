@@ -1,7 +1,7 @@
 ﻿using System.Globalization;
 using Newtonsoft.Json;
 
-namespace Solidex.Microcervices.Core.Helper
+namespace Solidex.Microservices.Core.Helper
 {
     public class JsonHelper
     {

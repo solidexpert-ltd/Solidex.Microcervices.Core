@@ -4,7 +4,7 @@ using System.Net.Http.Headers;
 using Microsoft.AspNetCore.Http;
 using Solidex.Core.Base.ComplexTypes;
 
-namespace Solidex.Microcervices.Core.JwtAuth
+namespace Solidex.Microservices.Core.JwtAuth
 {
     public class JwtHttpClient: HttpClient
     {

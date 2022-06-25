@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
-using Solidex.Microcervices.Core.Infrasructure;
+using Solidex.Microservices.Core.Infrasructure;
 using Microsoft.AspNetCore.Mvc;
 using Solidex.Core.Base.Infrastructure;
 
-namespace Solidex.Microcervices.Core.Extension
+namespace Solidex.Microservices.Core.Extension
 {
     public interface IControllerWithMapper
     {

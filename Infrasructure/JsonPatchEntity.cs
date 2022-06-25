@@ -1,4 +1,4 @@
-﻿namespace Solidex.Microcervices.Core.Infrasructure
+﻿namespace Solidex.Microservices.Core.Infrasructure
 {
     public class JsonPatchEntity
     {

@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.OpenApi.Models;
 
-namespace Solidex.Microcervices.Core.ServerMiddleware
+namespace Solidex.Microservices.Core.ServerMiddleware
 {
     public static class ApplicationExtension
     {
