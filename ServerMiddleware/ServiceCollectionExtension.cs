@@ -1,8 +1,6 @@
 ﻿using System;
 using System.IdentityModel.Tokens.Jwt;
-using System.Reflection;
 using System.Text;
-using AutoMapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
