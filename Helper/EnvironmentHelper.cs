@@ -29,7 +29,7 @@ namespace Solidex.Microservices.Core.Helper
             if (!string.IsNullOrEmpty(password))
                 connectionParameters["Password"] = password;
 
-            return String.Join(", ", connectionParameters.Select(x => $"{x.Key}={x.Value}"));
+            return String.Join(";", connectionParameters.Select(x => $"{x.Key}={x.Value}"));
 
             //  return builder.ToString();
         }
