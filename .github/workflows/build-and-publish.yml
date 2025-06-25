@@ -15,7 +15,7 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: '6.0.x'
+        dotnet-version: '7.0.x'
 
     - name: Setup GitHub Packages
       run: dotnet nuget add source --username siarhei-shchypanau --password ${{ secrets.NUGET_API_KEY }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/solidexpert-ltd/index.json"

@@ -6,18 +6,18 @@
     <FileVersion>1.0.*</FileVersion>
     <Version>1.0.11</Version>
     <Deterministic>false</Deterministic>
-    <TargetFramework>net6.0</TargetFramework>
-    <PackageVersion>6.0.2</PackageVersion>
+    <TargetFramework>net7.0</TargetFramework>
+    <PackageVersion>7.0.0</PackageVersion>
   </PropertyGroup>
 
 
   <ItemGroup>
-    <PackageReference Include="AutoMapper" Version="[10.0.0,13.0.0]" />
-    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.21" />
-    <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="6.0.21" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="[6.0.0,6.0.21]" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.21" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.1" />
+    <PackageReference Include="AutoMapper" Version="[12.0.0,13.0.0]" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="7.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="[7.0.0,7.0.15]" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="[13.0.1,13.0.1]" />
     <PackageReference Include="Solidex.Core.Base" Version="[1.0.20,1.2.0]" />
     <PackageReference Include="Swashbuckle.AspNetCore.Filters" Version="7.0.8" />
