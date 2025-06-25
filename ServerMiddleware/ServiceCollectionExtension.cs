@@ -5,14 +5,13 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using Solidex.Microservices.Core.Infrasructure.Authorization;
 using Swashbuckle.AspNetCore.Filters;
 
 namespace Solidex.Microservices.Core.ServerMiddleware
 {
     public static class ServiceCollectionExtension
     {
-        public static IServiceCollection AddSolidAuthorization(this IServiceCollection collection)
+        public static IServiceCollection AddSolidAuthorization(this IServiceCollection collection, AuthOptions authOptions)
         {
             JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear(); // => remove default claims
 
@@ -29,9 +28,9 @@ namespace Solidex.Microservices.Core.ServerMiddleware
                     cfg.SaveToken = true;
                     cfg.TokenValidationParameters = new TokenValidationParameters
                     {
-                        ValidIssuer = AuthOptions.JwtIssuer,
-                        ValidAudience = AuthOptions.JwtIssuer,
-                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(AuthOptions.JwtKey)),
+                        ValidIssuer = authOptions.JwtIssuer,
+                        ValidAudience = authOptions.JwtIssuer,
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(authOptions.JwtKey)),
                         ClockSkew = TimeSpan.Zero // remove delay of token when expire
                     };
                 });

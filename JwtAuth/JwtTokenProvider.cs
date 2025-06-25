@@ -5,13 +5,18 @@ using System.Security.Claims;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
 using Solidex.Core.Base.ComplexTypes;
-using Solidex.Microservices.Core.Infrasructure.Authorization;
+
+public class AuthOptions
+{
+    public string JwtKey { get; set; }
+    public string JwtIssuer { get; set; }
+}
 
 namespace Solidex.Microservices.Core.JwtAuth
 {
     public static class JwtTokenProvider
     {
-        public static string GenerateJwtToken(string userName, string userId, Guid ui, IList<string> roles)
+        public static string GenerateJwtToken(string userName, string userId, Guid ui, IList<string> roles, AuthOptions authOptions)
         {
             var claims = new List<Claim>
             {
@@ -25,13 +30,13 @@ namespace Solidex.Microservices.Core.JwtAuth
                 claims.Add(new Claim(ClaimTypes.Role, role));
             }
 
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(AuthOptions.JwtKey));
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(authOptions.JwtKey));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
             var expires = DateTime.Now.AddDays(30);
 
             var token = new JwtSecurityToken(
-                AuthOptions.JwtIssuer,
-                AuthOptions.JwtIssuer,
+                authOptions.JwtIssuer,
+                authOptions.JwtIssuer,
                 claims,
                 expires: expires,
                 signingCredentials: creds
@@ -40,12 +45,8 @@ namespace Solidex.Microservices.Core.JwtAuth
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
 
-        public static string GenerateSystemToken()
-        {
-            return GenerateSystemToken(SystemUsersEnumeration.SystemMessage);
-        }
 
-        public static string GenerateSystemToken(SystemUsersEnumeration user)
+        public static string GenerateSystemToken(SystemUsersEnumeration user, AuthOptions authOptions)
         {
             return GenerateJwtToken("System", Guid.Empty.ToString(),
                 user.Identificator,
@@ -54,7 +55,7 @@ namespace Solidex.Microservices.Core.JwtAuth
                     "root-admin",
                     "root-user",
                     "category-administrator"
-                });
+                }, authOptions);
         }
     }
 }
