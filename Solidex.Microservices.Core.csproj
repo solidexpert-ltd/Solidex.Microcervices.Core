@@ -19,7 +19,7 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.21" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.1" />
     <PackageReference Include="Newtonsoft.Json" Version="[13.0.1,13.0.1]" />
-    <PackageReference Include="Solidex.Core.Base" Version="[1.0.20,1.1.0]" />
+    <PackageReference Include="Solidex.Core.Base" Version="[1.0.20,1.1.0,1.1.6]" />
     <PackageReference Include="Swashbuckle.AspNetCore.Filters" Version="7.0.8" />
     <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.5.0" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.5.0" />

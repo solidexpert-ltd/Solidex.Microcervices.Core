@@ -17,6 +17,9 @@ jobs:
       with:
         dotnet-version: '6.0.x'
 
+    - name: Setup GitHub Packages
+      run: dotnet nuget add source --username siarhei-shchypanau --password ${{ secrets.NUGET_API_KEY }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/solidexpert-ltd/index.json"
+
     - name: Restore dependencies
       run: dotnet restore
 
@@ -28,9 +31,6 @@ jobs:
 
     - name: Pack
       run: dotnet pack -p:PackageVersion=1.1.${{ github.run_number }} -o ./ --configuration Release
-
-    - name: Setup GitHub Packages
-      run: dotnet nuget add source --username siarhei-shchypanau --password ${{ secrets.NUGET_API_KEY }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/solidexpert-ltd/index.json"
 
     - name: Publish to GitHub Packages
       run: dotnet nuget push Solidex.Microservices.Core.1.1.${{ github.run_number }}.nupkg --source github
