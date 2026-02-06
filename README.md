@@ -1,6 +1,6 @@
 # Solidex.Microservices.Core
 
-A comprehensive .NET 6 library providing essential infrastructure components for building microservices with standardized patterns, JWT authentication, database context management, and Swagger documentation.
+A comprehensive .NET 10 library providing essential infrastructure components for building microservices with standardized patterns, JWT authentication, database context management, and Swagger documentation.
 
 ## 📦 NuGet Package
 
@@ -9,7 +9,7 @@ Solidex.Microservices.Core
 ```
 
 **Version:** 1.0.11  
-**Target Framework:** .NET 6.0
+**Target Framework:** .NET 10.0
 
 ## 🚀 Features
 
@@ -199,14 +199,14 @@ public static class AuthOptions
 
 ## 📋 Dependencies
 
-- **AutoMapper** (10.0.0-13.0.0) - Object mapping
-- **Microsoft.AspNetCore.Authentication.JwtBearer** (6.0.21) - JWT authentication
-- **Microsoft.AspNetCore.Authorization** (6.0.21) - Authorization
-- **Microsoft.AspNetCore.Mvc.NewtonsoftJson** (6.0.0-6.0.21) - JSON serialization
-- **Microsoft.EntityFrameworkCore** (6.0.21) - Database access
-- **Newtonsoft.Json** (13.0.1) - JSON processing
-- **Solidex.Core.Base** (1.0.20-1.1.0) - Base infrastructure
-- **Swashbuckle.AspNetCore** (6.5.0) - API documentation
+- **AutoMapper** (13.0.1) - Object mapping
+- **Microsoft.AspNetCore.Authentication.JwtBearer** (10.0.0) - JWT authentication
+- **Microsoft.AspNetCore.Authorization** (10.0.0) - Authorization
+- **Microsoft.AspNetCore.Mvc.NewtonsoftJson** (10.0.0) - JSON serialization
+- **Microsoft.EntityFrameworkCore** (10.0.0) - Database access
+- **Newtonsoft.Json** (13.0.3) - JSON processing
+- **Solidex.Core.Base** (1.0.20-1.2.0) - Base infrastructure
+- **Swashbuckle.AspNetCore** (7.2.0) - API documentation
 
 ## 🏗️ Building from Source
 
@@ -250,4 +250,4 @@ dotnet pack
 
 ---
 
-**Note:** This library is designed for .NET 6.0 applications and provides a solid foundation for building microservices with standardized patterns and best practices. 
+**Note:** This library is designed for .NET 10.0 applications and provides a solid foundation for building microservices with standardized patterns and best practices. 
