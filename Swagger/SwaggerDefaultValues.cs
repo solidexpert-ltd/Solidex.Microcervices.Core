@@ -82,10 +82,12 @@ namespace Solidex.Microservices.Core.Swagger
         {
             return element.ValueKind switch
             {
-                JsonValueKind.String => new OpenApiString( element.GetString() ),
+                JsonValueKind.String => new OpenApiString( element.GetString() ?? string.Empty ),
                 JsonValueKind.Number => element.TryGetInt32( out var intValue )
                     ? new OpenApiInteger( intValue )
-                    : new OpenApiDouble( element.GetDouble() ),
+                    : element.TryGetInt64( out var longValue )
+                        ? new OpenApiLong( longValue )
+                        : new OpenApiDouble( element.GetDouble() ),
                 JsonValueKind.True => new OpenApiBoolean( true ),
                 JsonValueKind.False => new OpenApiBoolean( false ),
                 JsonValueKind.Null => new OpenApiNull(),
