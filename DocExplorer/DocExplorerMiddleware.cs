@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -69,14 +70,41 @@ namespace Solidex.Microservices.Core.DocExplorer
 
         private static string ResolveDocsPath(IWebHostEnvironment env)
         {
-            var candidates = new[]
+            // Try to find controllerDocs folder (case-insensitive for Linux support)
+            var assemblyDir = Path.GetDirectoryName(Assembly.GetEntryAssembly()?.Location) ?? ".";
+            
+            var searchPaths = new[]
             {
-                Path.Combine(env.ContentRootPath, "controllerDocs"),
-                Path.Combine(
-                    Path.GetDirectoryName(Assembly.GetEntryAssembly()?.Location) ?? ".",
-                    "..", "controllerDocs")
+                env.ContentRootPath,
+                assemblyDir
             };
-            return candidates.FirstOrDefault(Directory.Exists);
+
+            foreach (var basePath in searchPaths)
+            {
+                if (!Directory.Exists(basePath))
+                    continue;
+
+                // Try exact match first for performance
+                var exactPath = Path.Combine(basePath, "controllerDocs");
+                if (Directory.Exists(exactPath))
+                    return exactPath;
+
+                // Try case-insensitive match by enumerating directories
+                try
+                {
+                    var directories = Directory.GetDirectories(basePath);
+                    var match = directories.FirstOrDefault(dir =>
+                        string.Equals(Path.GetFileName(dir), "controllerDocs", StringComparison.OrdinalIgnoreCase));
+                    if (match != null)
+                        return match;
+                }
+                catch
+                {
+                    // Ignore errors enumerating directories
+                }
+            }
+
+            return null;
         }
     }
 }
