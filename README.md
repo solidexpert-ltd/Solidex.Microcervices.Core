@@ -1,6 +1,6 @@
 # Solidex.Microservices.Core
 
-A comprehensive .NET 10 library providing essential infrastructure components for building microservices with standardized patterns, JWT authentication, database context management, and Swagger documentation.
+A comprehensive .NET 10 library providing essential infrastructure components for building microservices with standardized patterns, JWT authentication, and database context management.
 
 ## 📦 NuGet Package
 
@@ -29,12 +29,6 @@ Solidex.Microservices.Core
 - **Error Handling Middleware**: Global exception handling with proper HTTP status codes
 - **Response Models**: Consistent API response structure
 - **Pagination Support**: Built-in pagination utilities
-
-### 📚 Swagger Documentation
-- **OpenAPI Integration**: Enhanced Swagger documentation
-- **Security Definitions**: JWT Bearer token documentation
-- **Path Prefix Support**: Configurable API path prefixes
-- **Default Values**: Automatic parameter documentation
 
 ### 🔧 Utilities & Helpers
 - **JSON Processing**: Robust JSON parsing and serialization utilities
@@ -72,9 +66,6 @@ Solidex.Microservices.Core/
 │   ├── ErrorHandlingMiddleware.cs   # Global error handling
 │   ├── ServiceCollectionExtension.cs # Service registration extensions
 │   └── ServiceMiddleware.cs         # Service configuration utilities
-└── Swagger/
-    ├── PathPrefixInsertDocumentFilter.cs # Swagger path prefix support
-    └── SwaggerDefaultValues.cs      # Swagger documentation enhancements
 ```
 
 ## 🛠️ Installation
@@ -140,17 +131,7 @@ public class SampleController : ControllerBase, IControllerWithMapper
 }
 ```
 
-### 4. Swagger Configuration
-
-```csharp
-// In Startup.cs or Program.cs
-services.AddSwaggerConf("YourAssemblyName");
-
-// In Configure method
-app.UseSwaggerSolidConf(isDevelopment, "/api");
-```
-
-### 5. JWT HTTP Client
+### 4. JWT HTTP Client
 
 ```csharp
 // System token client
@@ -160,14 +141,14 @@ var client = new JwtHttpClient("https://api.example.com");
 var client = new JwtHttpClient("https://api.example.com", httpContextAccessor);
 ```
 
-### 6. Error Handling Middleware
+### 5. Error Handling Middleware
 
 ```csharp
 // In Configure method
 app.UseMiddleware<ErrorHandlingMiddleware>();
 ```
 
-### 7. Service Registration
+### 6. Service Registration
 
 ```csharp
 // In Startup.cs or Program.cs
@@ -206,7 +187,6 @@ public static class AuthOptions
 - **Microsoft.EntityFrameworkCore** (10.0.0) - Database access
 - **Newtonsoft.Json** (13.0.3) - JSON processing
 - **Solidex.Core.Base** (1.0.20-1.2.0) - Base infrastructure
-- **Swashbuckle.AspNetCore** (7.2.0) - API documentation
 
 ## 🏗️ Building from Source
 
