@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Solidex.Microservices.Core.csproj" />
+  <Project Path="Solidex.Microservices.Core.Tests/Solidex.Microservices.Core.Tests.csproj" />
+</Solution>

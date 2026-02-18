@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
-using Solidex.Microservices.Core.Infrasructure;
+using Solidex.Microservices.Core.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 using Solidex.Core.Base.Infrastructure;
 

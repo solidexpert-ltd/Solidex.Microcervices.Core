@@ -1,4 +1,4 @@
-﻿namespace Solidex.Microservices.Core.Infrasructure.SignalR
+﻿namespace Solidex.Microservices.Core.Infrastructure.SignalR
 {
     public class BroadcastMessage
     {
