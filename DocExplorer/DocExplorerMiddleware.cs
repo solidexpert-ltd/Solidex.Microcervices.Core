@@ -98,9 +98,13 @@ namespace Solidex.Microservices.Core.DocExplorer
                     if (match != null)
                         return match;
                 }
-                catch
+                catch (UnauthorizedAccessException)
                 {
-                    // Ignore errors enumerating directories
+                    // Ignore permission issues when enumerating directories
+                }
+                catch (IOException)
+                {
+                    // Ignore I/O errors when enumerating directories
                 }
             }
 
