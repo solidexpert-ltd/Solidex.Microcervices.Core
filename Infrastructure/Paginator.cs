@@ -1,5 +1,5 @@
 ﻿
-namespace Solidex.Microservices.Core.Infrasructure
+namespace Solidex.Microservices.Core.Infrastructure
 {
     public static class Paginator
     {

@@ -25,14 +25,15 @@
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="10.1.4" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Api\" />
-    <Folder Include="ApiResponse\" />
-  </ItemGroup>
-
   <PropertyGroup>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <NoWarn>$(NoWarn);1591</NoWarn>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Solidex.Microservices.Core.Tests\**" />
+    <EmbeddedResource Remove="Solidex.Microservices.Core.Tests\**" />
+    <None Remove="Solidex.Microservices.Core.Tests\**" />
+  </ItemGroup>
 
 </Project>
