@@ -4,8 +4,6 @@ using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
-using Microsoft.OpenApi.Models;
-using Swashbuckle.AspNetCore.Filters;
 
 namespace Solidex.Microservices.Core.ServerMiddleware
 {
@@ -34,27 +32,6 @@ namespace Solidex.Microservices.Core.ServerMiddleware
                         ClockSkew = TimeSpan.Zero // remove delay of token when expire
                     };
                 });
-
-            return collection;
-        }
-
-        public static IServiceCollection AddSwaggerConf(this IServiceCollection collection, string assemblyName)
-        {
-            collection.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v3", new OpenApiInfo {Title = $"{assemblyName} API", Version = "v3"});
-                var basePath = AppContext.BaseDirectory;
-                c.IncludeXmlComments(basePath + $"{assemblyName}.xml");
-
-                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
-                {
-                    Description =
-                        "JWT Authorization header using the Bearer scheme. Example: \"Authorization: Bearer {token}\"",
-                    Name = "Authorization",
-                    In = ParameterLocation.Header,
-                });
-                c.OperationFilter<SecurityRequirementsOperationFilter>();
-            });
 
             return collection;
         }
