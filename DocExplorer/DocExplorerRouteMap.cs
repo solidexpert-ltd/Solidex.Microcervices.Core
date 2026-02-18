@@ -25,7 +25,7 @@ namespace Solidex.Microservices.Core.DocExplorer
                 {
                     var routeName = GetRouteName(method);
                     if (!string.IsNullOrEmpty(routeName))
-                        map[routeName] = $"{controllerName}{Path.DirectorySeparatorChar}{routeName}.md";
+                        map[routeName] = Path.Combine(controllerName, $"{routeName}.md");
                 }
             }
 

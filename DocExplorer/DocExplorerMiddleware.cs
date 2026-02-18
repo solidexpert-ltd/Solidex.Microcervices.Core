@@ -30,7 +30,7 @@ namespace Solidex.Microservices.Core.DocExplorer
                 return;
             }
 
-            var routeName = path.Substring(BasePath.Length).Trim('/');
+            var routeName = path[BasePath.Length..].Trim('/');
             if (string.IsNullOrWhiteSpace(routeName))
             {
                 context.Response.StatusCode = StatusCodes.Status400BadRequest;
